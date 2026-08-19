@@ -12,13 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <form action="register" method="POST"> <!--Post to the Java bean-->
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username">
+        <h1>Sign In</h1>
+        <form action="signIn" method="GET"> <!--Post to the Java bean-->
+            <label for="usernameSignIn">Username</label>
+            <input type="text" id="usernameSignIn" name="usernameSignIn">
             
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+            <label for="passwordSignIn">Password</label>
+            <input type="password" id="passwordSignIn" name="passwordSignIn">
             
             <button type="submit">Sign in</button>
             

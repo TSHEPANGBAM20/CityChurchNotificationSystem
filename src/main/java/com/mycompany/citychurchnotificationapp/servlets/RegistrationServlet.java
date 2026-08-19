@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -37,7 +38,7 @@ public class RegistrationServlet extends HttpServlet{
         }
         
         if (password.length() < 8){
-            response.sendRedirect("Registration.html");
+            response.getWriter().print("Registration failed. Password length must be atleast 8 characters");
             return;
         }
         
@@ -45,12 +46,11 @@ public class RegistrationServlet extends HttpServlet{
         response.getWriter().print("Registration failed. User already exists.");
         return;
         }
-        
-
-
-//       
-        
+       
         users.put(username, password);
+        
+        response.getWriter().print("Registration Successful");
+        
   
     }
    
